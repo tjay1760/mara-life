@@ -1,13 +1,19 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar';
 import HomePage from './components/Home/HomePage';
+import {Routes, Route } from "react-router";
+import {}
+
 
 const App = () => {
   return (
-    <div className='font-bold'>
+    <>
       <Navbar/>
+      <Routes>
       <HomePage/>
-    </div>
+      </Routes>
+      
+    <>
   )
 }
 

@@ -28,3 +28,31 @@ border:transparent;
     background-color: #fff;
     transform: scale(1.2); 
   }
+  .product-slide {
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .product-slide:hover {
+    transform: scale(1.05);
+  }
+
+@media (min-width:768px) {
+  .mobile-swiper{
+    display:none;
+  
+    } 
+}
+@media (max-width:768px) {
+  .desktop-swiper{
+    display:none;
+    } 
+    .desktop-product-pic{
+      display:none;
+    }
+}

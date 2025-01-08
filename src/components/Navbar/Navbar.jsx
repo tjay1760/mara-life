@@ -50,8 +50,8 @@ const Navbar = () => {
             <button
               className={`md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/"
-                  ? "md:bg-green-600 md:text-white"
-                  : "md:active:bg-green-600"
+                  ? "md:bg-buttonHover md:text-white"
+                  : "md:active:bg-buttonHover"
               }`}
               onClick={() => handleLinkClick("/")}
             >
@@ -62,8 +62,8 @@ const Navbar = () => {
             <button
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/about"
-                  ? "md:bg-green-600 md:text-white"
-                  : "md:active:bg-green-600"
+                  ? "md:bg-buttonHover md:text-white"
+                  : "md:active:bg-buttonHover"
               }`}
               onClick={() => handleLinkClick("/about")}
             >
@@ -74,8 +74,8 @@ const Navbar = () => {
             <button
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/products"
-                  ? "md:bg-green-600 md:text-white"
-                  : "md:active:bg-green-600"
+                  ? "md:buttonHover md:text-white"
+                  : "md:active:buttonHover"
               }`}
               onClick={() => handleLinkClick("/products")}
             >
@@ -86,8 +86,8 @@ const Navbar = () => {
             <button
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/trainings"
-                  ? "md:bg-green-600 md:text-white"
-                  : "md:active:bg-green-600"
+                  ? "md:bg-buttonHover md:text-white"
+                  : "md:active:bg-buttonHover"
               }`}
               onClick={() => handleLinkClick("/trainings")}
             >
@@ -98,8 +98,8 @@ const Navbar = () => {
             <button
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/blog"
-                  ? "md:bg-green-600 md:text-white"
-                  : "md:active:bg-green-600"
+                  ? "md:bg-buttonHover md:text-white"
+                  : "md:active:buttonHover"
               }`}
               onClick={() => handleLinkClick("/blog")}
             >
@@ -110,8 +110,8 @@ const Navbar = () => {
             <button
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/contact"
-                  ? "md:bg-green-600 md:text-white"
-                  : "md:active:bg-green-600"
+                  ? "md:buttonHover md:text-white"
+                  : "md:active:bg-buttonHover"
               }`}
               onClick={() => handleLinkClick("/contact")}
             >

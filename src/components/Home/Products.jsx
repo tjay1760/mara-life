@@ -42,13 +42,14 @@ const Products = () => {
   };
 
   return (
-    <div className="products-section p-4  w-11/12 mx-auto rounded-xl"
+    <div className="products-section p-4  w-11/12 mx-auto rounded-xl md:flex md:items-center md:justify-center md:gap-10 md:p-10 mt-10"
     style={{
         backgroundImage: `url(${productBgImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
     }}
     >
+      <div className="mobile-swiper">
       <Swiper spaceBetween={10} slidesPerView={2.5}>
         {ourProducts.map((product, index) => (
           <SwiperSlide
@@ -60,20 +61,31 @@ const Products = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <div className="product-details text-white mt-4">
+      </div>
+      <div className="desktop-swiper flex flex-col gap-2">
+        {ourProducts.map((product,index)=><button key={index} className='glass product-slide'>{product.name}</button>)}
+      </div>
+<div className="middle-div md:w-1/3 md:pt-0">
+<div className="product-details text-white mt-4">
         <h1 className="product-name text-2xl font-bold">{selectedProduct.name}</h1>
         <p className="product-description mt-2">{selectedProduct.description}</p>
         <img
-          className="product-pic mt-4 rounded"
+          className="md:hidden mt-4 rounded"
           src={selectedProduct.image}
           alt={selectedProduct.name}
         />
       </div>
-      <div className="buttons flex justify-between mt-2">
-        <button className='bg-white py-1 px-3 rounded-xl hover:bg-green-400'>Learn More</button>
-        <button className='bg-white py-1 px-3 rounded-xl hover:bg-green-400'>Order Product</button>
+      <div className="buttons flex justify-between mt-2 md:justify-start md:gap-4">
+        <button className='bg-white py-1 px-3 rounded-xl hover:bg-buttonHover'>Learn More</button>
+        <button className='bg-white py-1 px-3 rounded-xl hover:bg-buttonHover'>Order Product</button>
       </div>
+</div>
+     
+      <img
+          className="desktop-product-pic h-80 rounded"
+          src={selectedProduct.image}
+          alt={selectedProduct.name}
+        />
     </div>
   );
 };

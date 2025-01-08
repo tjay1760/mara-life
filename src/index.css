@@ -41,6 +41,18 @@ border:transparent;
   .product-slide:hover {
     transform: scale(1.05);
   }
-  .spacer{
-    margin-top: 10px;
-  }
+
+@media (min-width:768px) {
+  .mobile-swiper{
+    display:none;
+  
+    } 
+}
+@media (max-width:768px) {
+  .desktop-swiper{
+    display:none;
+    } 
+    .desktop-product-pic{
+      display:none;
+    }
+}

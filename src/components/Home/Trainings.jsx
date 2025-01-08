@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 import trainingPhoto1 from "../../assets/trainings/training-img1.jpg";
 import trainingPhoto2 from "../../assets/trainings/trainig-img2.jpg";
 import trainingPhoto3 from "../../assets/trainings/training-img3.jpg";
 import trainingPhoto4 from "../../assets/trainings/training-img4.jpg";
 import arrow from "../../assets/trainings/card-arrow.svg"
-import "swiper/css";
+import trainingsBgImg from "../../assets/trainings/trainingsbg-img.svg"
+
 
 const ourTrainings =[
   {
@@ -36,7 +39,15 @@ const ourTrainings =[
 const Trainings = () => {
   return (
     <>
-      <div className="trainings-container w-11/12 mx-auto mt-10">
+      <div className="trainings-container w-11/12 mx-auto mt-10"
+      style={{
+        backgroundImage:`url(${trainingsBgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      >
+        <div className="description-box md:w-5/6 md:mx-auto md:flex md:items-center">
+        <div className="descriptions md:w-4/5">
         <h1 className="text-green-900 font-bold text-3xl m-1">Upcoming Trainings</h1>
         <p className="p-1">
           Learn effective, eco-friendly pest control methods with our
@@ -44,11 +55,22 @@ const Trainings = () => {
           naturally, ensuring healthier crops, safer environments, and reduced
           chemical dependency for long-term agricultural success.
         </p>
-        <button className="bg-buttonHover py-2 px-4 rounded-xl text-gray-900 ml-auto block">View All</button>
+        </div>
+        <button className="bg-buttonHover py-2 px-4 rounded-xl text-gray-900 ml-auto block max-w-max">View All</button>
+        </div>
+                      
         <div className="cards mt-5">
           <Swiper
           spaceBetween={10}
           slidesPerView={1.25}
+          breakpoints={{
+            768:{
+              slidesPerView: 2.5
+            },
+            1024:{
+              slidesPerView: 2.5
+            }
+          }}
           >
             {ourTrainings.map((training)=>
             <SwiperSlide key={training.id}>

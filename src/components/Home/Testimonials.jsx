@@ -5,7 +5,8 @@ import farmerImg1 from "../../assets/testimonials/farmer-1.jpg";
 import farmerImg2 from "../../assets/testimonials/farmer-2.jpg";
 import farmerImg3 from "../../assets/testimonials/farmer-3.jpg";
 import farmerImg4 from "../../assets/testimonials/farmer-4.jpg";
-import testimonialBgImg from "../../assets/hero/herobg1.png"
+import testimonialBgImg from "../../assets/testimonials/testimonial-background-image.png";
+import testimonialImg from "../../assets/hero/herobg1.png";
 
 const ourTestimonials = [
   {
@@ -45,22 +46,27 @@ const ourTestimonials = [
 const Testimonials = () => {
   return (
     <div className="testimonial-container w-11/12 mx-auto mt-10 p-2"
-   
     >
-      <h1 className="text-green-900 font-bold text-3xl">
+      <div className="testimonial-description md:w-5/6 md:mx-auto md:mb-5">
+      <h1 className="text-green-900 font-bold text-3xl md:text-5xl md:mb-2">
         Success stories from our farmers
       </h1>
       <p>
         Discover how sustainable farming has had an impact on farmers and
         agricultural professions.
       </p>
-      <div className="testimonial-card-holder b p-5 flex justify-center items-center rounded-xl"
+      </div>
+      
+      <div className="testimonial-card-holder rounded-xl md:flex md:justify-end"
        style={{
         backgroundImage:`url(${testimonialBgImg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
     }}
       >
+
+        <div className="swiper-holder">
         <Swiper
          spaceBetween={10}
          slidesPerView={1.25}
@@ -72,16 +78,17 @@ const Testimonials = () => {
              slidesPerView: 2.5
            }
          }}
+         className="half"
         >
           {ourTestimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="full-card relative glass text-white rounded-xl p-5 text-center overflow-v">
+              <div className="full-card relative text-white rounded-xl p-5 text-center overflow-v">
                 <img
                   className="absolute w-20 h-20 rounded-full z-10 top-16 left-1/2 transform -translate-x-1/2 border-4 border-white shadow-lg"
                   src={testimonial.img}
                   alt={testimonial.name}
                 />
-                <div className="testimonial-holder  mt-20 pt-14"> 
+                <div className="testimonial-holder glass mt-20 p-4 pt-14"> 
                   <h3 className="font-bold">{testimonial.name}</h3>
                   <p className="text-sm italic">{testimonial.occupation}</p>
                   <p className="testimonial mt-2">{testimonial.testimonial}</p>
@@ -90,6 +97,8 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
+        
       </div>
     </div>
   );

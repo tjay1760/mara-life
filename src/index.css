@@ -47,6 +47,9 @@ border:transparent;
     display:none;
   
     } 
+    .half{
+      width: 50rem;
+    }
 }
 @media (max-width:768px) {
   .desktop-swiper{

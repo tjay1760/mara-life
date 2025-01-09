@@ -57,7 +57,7 @@ const Testimonials = () => {
       </p>
       </div>
       
-      <div className="testimonial-card-holder b p-5 rounded-xl md:flex md:justify-end"
+      <div className="testimonial-card-holder rounded-xl md:flex md:justify-end"
        style={{
         backgroundImage:`url(${testimonialBgImg})`,
                 backgroundSize: "cover",

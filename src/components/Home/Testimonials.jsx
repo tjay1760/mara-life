@@ -54,13 +54,16 @@ const Testimonials = () => {
         Discover how sustainable farming has had an impact on farmers and
         agricultural professions.
       </p>
-      <div className="testimonial-card-holder b p-5 flex justify-center items-center rounded-xl"
+      <div className="testimonial-card-holder b p-5 rounded-xl"
        style={{
         backgroundImage:`url(${testimonialBgImg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                display: "flex", // Flexbox container
+    justifyContent: "flex-end"
     }}
       >
+        <div className="swiper-holder">
         <Swiper
          spaceBetween={10}
          slidesPerView={1.25}
@@ -72,6 +75,7 @@ const Testimonials = () => {
              slidesPerView: 2.5
            }
          }}
+         className="half"
         >
           {ourTestimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
@@ -90,6 +94,8 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        </div>
+        
       </div>
     </div>
   );

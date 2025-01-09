@@ -6,7 +6,6 @@ import farmerImg2 from "../../assets/testimonials/farmer-2.jpg";
 import farmerImg3 from "../../assets/testimonials/farmer-3.jpg";
 import farmerImg4 from "../../assets/testimonials/farmer-4.jpg";
 import testimonialBgImg from "../../assets/testimonials/testimonial-background-image.png";
-import testimonialImg from "../../assets/hero/herobg1.png";
 
 const ourTestimonials = [
   {

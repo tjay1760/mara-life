@@ -57,13 +57,12 @@ const Testimonials = () => {
       </p>
       </div>
       
-      <div className="testimonial-card-holder b p-5 rounded-xl"
+      <div className="testimonial-card-holder b p-5 rounded-xl md:flex md:justify-end"
        style={{
         backgroundImage:`url(${testimonialBgImg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                display: "flex", // Flexbox container
-    justifyContent: "flex-end"
+                backgroundRepeat: "no-repeat"
     }}
       >
 
@@ -89,7 +88,7 @@ const Testimonials = () => {
                   src={testimonial.img}
                   alt={testimonial.name}
                 />
-                <div className="testimonial-holder glass mt-20 pt-14"> 
+                <div className="testimonial-holder glass mt-20 p-4 pt-14"> 
                   <h3 className="font-bold">{testimonial.name}</h3>
                   <p className="text-sm italic">{testimonial.occupation}</p>
                   <p className="testimonial mt-2">{testimonial.testimonial}</p>

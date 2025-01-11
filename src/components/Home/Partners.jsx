@@ -55,10 +55,10 @@ const ourPartners = [
 
 const Partners = () => {
   return (
-    <div className='w-11/12 mx-auto'>
+    <div className='w-11/12 mx-auto mt-10'>
       <style>{customStyles}</style>
-      <div className="partners-wrapper p-2 mb-1">
-        <h1 className="text-3xl font-bold text-green-900 mb-1">Our happy partners</h1>
+      <div className="partners-wrapper p-2 md:w-5/6 md:mx-auto md:mb-2">
+        <h1 className="text-3xl font-bold text-green-950 mb-1 md:text-5xl">Our happy partners</h1>
         <p>We have worked with a few of the best in the farming industry </p>
       </div>
       <Swiper

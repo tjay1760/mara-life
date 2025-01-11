@@ -6,7 +6,7 @@ import farmerImg2 from "../../assets/testimonials/farmer-2.jpg";
 import farmerImg3 from "../../assets/testimonials/farmer-3.jpg";
 import farmerImg4 from "../../assets/testimonials/farmer-4.jpg";
 import testimonialBgImg from "../../assets/testimonials/testimonial-background-image.png";
-import testimonialImg from "../../assets/hero/herobg1.png";
+import testimonialImg from "../../assets/testimonials/testimonial-png.png";
 
 const ourTestimonials = [
   {
@@ -65,7 +65,7 @@ const Testimonials = () => {
                 backgroundRepeat: "no-repeat"
     }}
       >
-
+<img src={testimonialImg} className="h-[26rem] md:mr-6"/>
         <div className="swiper-holder">
         <Swiper
          spaceBetween={10}

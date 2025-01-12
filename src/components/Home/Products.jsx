@@ -68,7 +68,7 @@ const Products = () => {
           ))}
         </Swiper>
       </div>
-      <div className="desktop-swiper flex flex-col gap-2">
+      <div className="desktop flex flex-col gap-2">
         {ourProducts.map((product, index) => (
           <button key={index} className="glass product-slide" onClick={()=>handleProductClick(product)}>
             {product.name}
@@ -100,7 +100,7 @@ const Products = () => {
       </div>
 
       <img
-        className="desktop-product-pic h-80 rounded"
+        className="desktop h-80 rounded"
         src={selectedProduct.image}
         alt={selectedProduct.name}
       />

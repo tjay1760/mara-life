@@ -15,7 +15,7 @@ const ourContacts = [
 
 function Footer() {
   return (
-    <div className="mt-10 p-2 bg-green-950 rounded-xl text-white flex flex-col gap-2 text-xs w-11/12 mx-auto">
+    <div className="mt-10 p-2 bg-green-950 rounded-xl text-white flex flex-col gap-2 text-xs w-11/12 mx-auto md:flex-row md:justify-between">
       <img src={Logo} alt="Logo" className="h-10 w-1/3" />
       <div className="contacts">
         <h1>Contacts</h1>
@@ -33,7 +33,7 @@ function Footer() {
           ></iframe>
         </div>
       </div>
-      <div className="socials flex flex-row w-2/3 justify-between mx-auto">
+      <div className="socials flex flex-row w-2/3 justify-between mx-auto md:hidden">
         <div className="facebook border p-1 rounded-full">
           <FaFacebookF />
         </div>
@@ -51,7 +51,7 @@ function Footer() {
           <FaWhatsapp />
         </div>
       </div>
-      <div className="copyright">
+      <div className="copyright md:hidden">
         @Copyright &nbsp;
         {new Date().getFullYear()}
       </div>

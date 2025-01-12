@@ -3,7 +3,7 @@ import Logo from "../../assets/hero/hero-logo.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { FaArrowLeft,FaArrowRight } from "react-icons/fa";
-import herobg1 from "../../assets/hero/herobg1.png"
+import herobg1 from "../../assets/hero/Hero-bg-image.png"
 import herobg2 from "../../assets/hero/herobg2.png"
 import herobg3 from "../../assets/hero/herobg3.png"
 import herobg4 from "../../assets/hero/herobg4.jpg"

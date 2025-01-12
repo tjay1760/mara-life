@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation"; // Add this import
+import "swiper/css/navigation"; 
 import { Navigation } from "swiper/modules";
 import partner1 from "../../assets/partners/partner-1.png";  
 import partner2 from "../../assets/partners/partner-2.png";  

@@ -52,10 +52,8 @@ border:transparent;
     }
 }
 @media (max-width:768px) {
-  .desktop-swiper{
-    display:none;
-    } 
-    .desktop-product-pic{
-      display:none;
+  
+    .desktop{
+      display: none;
     }
 }

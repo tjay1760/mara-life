@@ -45,7 +45,7 @@ border:transparent;
     transform: scale(1.05);
   }
 
-@media (width > 768px) {
+@media (width >= 768px) {
   .mobile-swiper{
     display:none;
   
@@ -103,6 +103,21 @@ border:transparent;
     right:1%;
     border-top-right-radius: 10px;
     box-shadow: 15px -0 0 #fff;
+  }
+
+  .header-navigation {
+    position: relative;
+    border: 2px solid #fff;
+    height: 45px;
+  }
+
+  .swiper-button-previous {
+    position: absolute;
+    transform: translateX(-300%); 
+  }
+  .swiper-btn-next{
+    position: absolute;
+    transform: translateX(-1500%);
   }
 }
 

@@ -74,7 +74,7 @@ const Hero = () => {
                 <SwiperSlide key={index} className="opacity-5">x</SwiperSlide>
               ))}
             </Swiper>
-            <div className="swiper-navigation-btn border flex gap-2">
+            <div className="swiper-navigation-btn flex gap-2">
               <div className="swiper-button-previous mobile-swiper glass text-white h-9 w-9 flex text-center items-center justify-center">
                 <FaArrowLeft />
               </div>

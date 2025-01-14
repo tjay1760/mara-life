@@ -48,7 +48,7 @@ const Products = () => {
 
   return (
     <div
-      className="products-section p-4  w-11/12 mx-auto rounded-xl md:flex md:items-center md:justify-center md:gap-10 md:p-10 mt-10"
+      className="products-section p-4 w-11/12 mx-auto rounded-xl md:flex md:items-center md:justify-center md:gap-10 md:p-10 mt-10"
       style={{
         backgroundImage: `url(${productBgImg})`,
         backgroundSize: "cover",
@@ -60,7 +60,11 @@ const Products = () => {
           {ourProducts.map((product, index) => (
             <SwiperSlide
               key={index}
-              className="product-slide glass"
+              className={`product-slide glass ${
+                selectedProduct.name === product.name
+                  ? "bg-white text-green-700 font-bold"
+                  : "hover:bg-white hover:text-green-700"
+              }`}
               onClick={() => handleProductClick(product)}
             >
               {product.name}
@@ -70,7 +74,15 @@ const Products = () => {
       </div>
       <div className="desktop flex flex-col gap-2">
         {ourProducts.map((product, index) => (
-          <button key={index} className="glass product-slide" onClick={()=>handleProductClick(product)}>
+          <button
+            key={index}
+            className={`glass product-slide ${
+              selectedProduct.name === product.name
+                ? "bg-white text-green-700 font-bold"
+                : "hover:bg-white hover:text-green-700"
+            }`}
+            onClick={() => handleProductClick(product)}
+          >
             {product.name}
           </button>
         ))}

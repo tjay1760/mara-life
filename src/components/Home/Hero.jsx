@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <>
       <div className="hero-container relative h-auto">
-        <div className="cut-out h-12 w-12 bg-white absolute right-0 rounded-xl md:w-[62%] md:h-[4.5rem]"></div>
+        <div className="cut-out h-12 w-12 bg-white absolute right-0 rounded-xl lg:w-[62%] lg:h-[4.5rem]"></div>
         <div className="hero-holder mx-auto mt-3 w-11/12 border rounded-3xl md:w-[98%]"
         style={{
             backgroundImage: `url(${heroBackground})`,
@@ -39,11 +39,11 @@ const Hero = () => {
             provide top-quality pesticide products to protect your crops and
             maximize yields.
           </div>
-          <div className="font-bold mt-2 mx-auto md:mx-10 md:mt-10 header-buttons text-gray-700 bg-white w-[18rem] border border-gray-900 p-2 rounded-2xl">
-            <button className="bg-white rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 p-2">
+          <div className="font-bold mt-2 mx-auto md:mx-10 md:mt-10 header-buttons text-gray-700 bg-white w-[18rem] border border-gray-200 py-1 px-1 rounded-lg">
+            <button className="bg-buttonHover rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1">
               Register Now
             </button>
-            <button className="bg-white rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 p-2">
+            <button className="bg-white rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1">
               Learn More
             </button>
           </div>

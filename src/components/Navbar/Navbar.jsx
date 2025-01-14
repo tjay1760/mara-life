@@ -5,121 +5,80 @@ import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const [activeLink, setActiveLink] = useState("/");
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    setIsMenuOpen(false); // Close the menu (optional)
+    setIsMenuOpen(false); // Close the menu
   };
 
-  // Function to toggle the menu state
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <>
+      {/* Button to toggle the menu */}
       <button
         onClick={toggleMenu}
         className={`${
           isMenuOpen
             ? "border-none"
             : "border border-gray-200 border-opacity-50 rounded-xl p-[1px]"
-        } text-3xl text-gray-600 md:hidden absolute top-4 right-2 z-20`}
+        } text-3xl text-gray-600 lg:hidden fixed top-4 right-2 z-30`}
         aria-label="Toggle menu"
       >
         {isMenuOpen ? <IoCloseOutline /> : <IoMenuOutline />}
       </button>
+
+      {/* Background blur effect */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"
+          onClick={toggleMenu} // Close menu if overlay is clicked
+        ></div>
+      )}
+
+      {/* Menu */}
       <div
         className={`${
-          isMenuOpen ? "flex" : "hidden md:flex"
-        } flex-col items-center border z-10 bg-white rounded-2xl h-96 m-3 gap-3 absolute w-11/12 md:h-auto lg:w-[60%] md:right-1 md:rounded-xl md:justify-between md:fixed md:border-4 md:border-opacity-5`}
-     style={{ boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-              }}
-     >
+          isMenuOpen ? "flex" : "hidden lg:flex"
+        } flex-col items-center border z-20 bg-white rounded-2xl h-96 m-3 gap-3 absolute w-11/12 lg:h-auto lg:w-[60%] lg:right-1 lg:rounded-xl lg:justify-between lg:fixed lg:border-4 lg:border-opacity-5`}
+        style={{
+          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+        }}
+      >
         <img
           src={NavLogo}
-          className="pb-6 px-4 pt-3 h-20 md:hidden"
+          className="pb-6 px-4 pt-3 h-20 lg:hidden"
           alt="Navbar Logo"
         />
         <nav
           className={
-            " flex flex-col gap-4 font-semibold text-gray-500 text-center md:flex md:flex-row md:items-start md:w-full md:justify-between md:p-1"
+            " flex flex-col gap-4 font-semibold text-gray-500 text-center lg:flex lg:flex-row lg:items-start lg:w-full lg:justify-between lg:p-1"
           }
         >
-          <Link to={"/"}>
-            <button
-              className={`md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
-                activeLink === "/"
-                  ? "md:bg-buttonHover md:text-white"
-                  : "md:active:bg-buttonHover"
-              }`}
-              onClick={() => handleLinkClick("/")}
-            >
-              Home
-            </button>
-          </Link>
-          <Link to={"/about"}>
-            <button
-              className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
-                activeLink === "/about"
-                  ? "md:bg-buttonHover md:text-white"
-                  : "md:active:bg-buttonHover"
-              }`}
-              onClick={() => handleLinkClick("/about")}
-            >
-              About
-            </button>
-          </Link>
-          <Link to={"/products"}>
-            <button
-              className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
-                activeLink === "/products"
-                  ? "md:bg-buttonHover md:text-white"
-                  : "md:active:bg-buttonHover"
-              }`}
-              onClick={() => handleLinkClick("/products")}
-            >
-              Product
-            </button>
-          </Link>
-          <Link to={"/trainings"}>
-            <button
-              className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
-                activeLink === "/trainings"
-                  ? "md:bg-buttonHover md:text-white"
-                  : "md:active:bg-buttonHover"
-              }`}
-              onClick={() => handleLinkClick("/trainings")}
-            >
-              Trainings
-            </button>
-          </Link>
-          <Link to={"/blog"}>
-            <button
-              className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
-                activeLink === "/blog"
-                  ? "md:bg-buttonHover md:text-white"
-                  : "md:active:bg-buttonHover"
-              }`}
-              onClick={() => handleLinkClick("/blog")}
-            >
-              Blog
-            </button>
-          </Link>
-          <Link to={"/contact"}>
-            <button
-              className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
-                activeLink === "/contact"
-                  ? "md:bg-buttonHover md:text-white"
-                  : "md:active:bg-buttonHover"
-              }`}
-              onClick={() => handleLinkClick("/contact")}
-            >
-              Contact
-            </button>
-          </Link>
+          {[
+            { path: "/", label: "Home" },
+            { path: "/about", label: "About" },
+            { path: "/products", label: "Product" },
+            { path: "/trainings", label: "Trainings" },
+            { path: "/blog", label: "Blog" },
+            { path: "/contact", label: "Contact" },
+          ].map((link) => (
+            <Link to={link.path} key={link.path}>
+              <button
+                className={`lg:rounded-xl lg:py-1 lg:px-3 hover:bg-gray-200 ${
+                  activeLink === link.path
+                    ? "lg:bg-buttonHover lg:text-white"
+                    : "lg:active:bg-buttonHover"
+                }`}
+                onClick={() => handleLinkClick(link.path)}
+              >
+                {link.label}
+              </button>
+            </Link>
+          ))}
         </nav>
       </div>
     </>

@@ -4,16 +4,17 @@
 
 .glass{
     backdrop-filter: blur(9px) saturate(79%);
-    -webkit-backdrop-filter: blur(9px) saturate(79%);
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: rgb(255 255 255 / 8%);
     border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+    border: 1px solid rgb(209 213 219 / 30%);
     color: #fff;
 }
+
 .swiper-button-previous, .swiper-btn-next{
     border-radius: 50%;
 border:transparent;
 }
+
 .custom-bullets {
     width: 22px !important;
     height: 10px !important;
@@ -28,6 +29,7 @@ border:transparent;
     background-color: #fff;
     transform: scale(1.2); 
   }
+
   .product-slide {
     display: flex;
     justify-content: center;
@@ -38,22 +40,89 @@ border:transparent;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
   }
+
   .product-slide:hover {
     transform: scale(1.05);
   }
 
-@media (min-width:768px) {
+@media (width >= 768px) {
   .mobile-swiper{
     display:none;
   
     } 
+
     .half{
       width: 50rem;
     }
+
+    .hero-holder::before{
+      background-color: transparent;
+      content: "";
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 0;
+      left: 35.05%;
+      border-top-right-radius: 10px;
+      box-shadow: 15px -0 0 #fff;
+    }
+
+    .hero-holder::after{
+      background-color: transparent;
+      content: "";
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 10.5%;
+      right:1%;
+      border-top-right-radius: 10px;
+      box-shadow: 15px -0 0 #fff;
+    }
 }
-@media (max-width:768px) {
-  
+
+@media (width >= 1024px) {
+  .hero-holder::before{
+    background-color: transparent;
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    left: 35.75%;
+    border-top-right-radius: 10px;
+    box-shadow: 15px -0 0 #fff;
+  }
+
+  .hero-holder::after{
+    background-color: transparent;
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 12%;
+    right:1%;
+    border-top-right-radius: 10px;
+    box-shadow: 15px -0 0 #fff;
+  }
+
+  /* .header-navigation {
+    position: relative;
+    height: 45px;
+  } */
+
+  .swiper-button-previous {
+   padding: 1%;
+  }
+
+  .swiper-btn-next{
+    padding: 1%;
+  }
+ 
+}
+
+@media (width <= 768px) {
     .desktop{
       display: none;
     }
+
 }

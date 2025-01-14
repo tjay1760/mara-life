@@ -105,20 +105,19 @@ border:transparent;
     box-shadow: 15px -0 0 #fff;
   }
 
-  .header-navigation {
+  /* .header-navigation {
     position: relative;
-    border: 2px solid #fff;
     height: 45px;
-  }
+  } */
 
   .swiper-button-previous {
-    position: absolute;
-    transform: translateX(-300%); 
+   padding: 1%;
   }
+
   .swiper-btn-next{
-    position: absolute;
-    transform: translateX(-1500%);
+    padding: 1%;
   }
+ 
 }
 
 @media (width <= 768px) {

@@ -4,7 +4,6 @@
 
 .glass{
     backdrop-filter: blur(9px) saturate(79%);
-    backdrop-filter: blur(9px) saturate(79%);
     background-color: rgb(255 255 255 / 8%);
     border-radius: 12px;
     border: 1px solid rgb(209 213 219 / 30%);
@@ -55,6 +54,16 @@ border:transparent;
     .half{
       width: 50rem;
     }
+
+    .hero-holder::before{
+      background-color: black;
+      content: "";
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 0;
+      left: 35%;
+    }
 }
 
 @media (width <=768px) {
@@ -62,7 +71,5 @@ border:transparent;
       display: none;
     }
 
-    .hero-holder::before{
-      background-color: black;
-    }
+   
 }

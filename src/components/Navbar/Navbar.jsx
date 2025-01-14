@@ -25,7 +25,7 @@ const Navbar = () => {
         className={`${
           isMenuOpen
             ? "border-none"
-            : "border border-gray-200 rounded-xl p-[1px]"
+            : "border border-gray-200 border-opacity-50 rounded-xl p-[1px]"
         } text-3xl text-gray-600 md:hidden absolute top-4 right-2 z-20`}
         aria-label="Toggle menu"
       >
@@ -34,8 +34,10 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden md:flex"
-        } flex-col items-center border border-gray-300 z-10 bg-white rounded-2xl h-96 m-3 gap-3 absolute w-11/12 md:h-auto lg:w-[60%] md:right-1 md:rounded-xl md:justify-between`}
-      >
+        } flex-col items-center border z-10 bg-white rounded-2xl h-96 m-3 gap-3 absolute w-11/12 md:h-auto lg:w-[60%] md:right-1 md:rounded-xl md:justify-between md:fixed md:border-4 md:border-opacity-5`}
+     style={{ boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+              }}
+     >
         <img
           src={NavLogo}
           className="pb-6 px-4 pt-3 h-20 md:hidden"
@@ -74,8 +76,8 @@ const Navbar = () => {
             <button
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/products"
-                  ? "md:buttonHover md:text-white"
-                  : "md:active:buttonHover"
+                  ? "md:bg-buttonHover md:text-white"
+                  : "md:active:bg-buttonHover"
               }`}
               onClick={() => handleLinkClick("/products")}
             >
@@ -99,7 +101,7 @@ const Navbar = () => {
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/blog"
                   ? "md:bg-buttonHover md:text-white"
-                  : "md:active:buttonHover"
+                  : "md:active:bg-buttonHover"
               }`}
               onClick={() => handleLinkClick("/blog")}
             >
@@ -110,7 +112,7 @@ const Navbar = () => {
             <button
               className={` md:rounded-xl md:py-1 md:px-3 hover:bg-gray-200 ${
                 activeLink === "/contact"
-                  ? "md:buttonHover md:text-white"
+                  ? "md:bg-buttonHover md:text-white"
                   : "md:active:bg-buttonHover"
               }`}
               onClick={() => handleLinkClick("/contact")}

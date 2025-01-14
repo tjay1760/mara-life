@@ -3,10 +3,10 @@ import Logo from "../../assets/hero/hero-logo.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { FaArrowLeft,FaArrowRight } from "react-icons/fa";
-import herobg1 from "../../assets/hero/Hero-bg-image.png"
-import herobg2 from "../../assets/hero/herobg2.png"
-import herobg3 from "../../assets/hero/herobg3.png"
-import herobg4 from "../../assets/hero/herobg4.jpg"
+import herobg1 from "../../assets/hero/hero-bg-desk-2.jpg"
+import herobg2 from "../../assets/hero/hero-bg-desk-video.png"
+import herobg3 from "../../assets/hero/hero-bg-desk-3.jpg"
+import herobg4 from "../../assets/hero/hero-bg-desk-4.jpg"
 
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,12 +19,13 @@ const Hero = () => {
   return (
     <>
       <div className="hero-container relative h-auto">
-        <div className="cut-out h-12 w-12 bg-white absolute right-0 rounded-xl md:w-[62%] md:h-[3.8rem]"></div>
+        <div className="cut-out h-12 w-12 bg-white absolute right-0 rounded-xl md:w-[62%] md:h-[4.5rem]"></div>
         <div className="hero-holder mx-auto mt-3 w-11/12 border rounded-3xl md:w-[98%]"
         style={{
             backgroundImage: `url(${heroBackground})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <div className="logo mt-3 mx-4 w-28 md:w-40">

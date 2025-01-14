@@ -56,13 +56,27 @@ border:transparent;
     }
 
     .hero-holder::before{
-      background-color: black;
+      background-color: transparent;
       content: "";
       height: 30px;
       width: 30px;
       position: absolute;
       top: 0;
-      left: 35%;
+      left: 35.8%;
+      border-top-right-radius: 10px;
+      box-shadow: 15px -0 0 #fff;
+    }
+
+    .hero-holder::after{
+      background-color: transparent;
+      content: "";
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 0;
+      left: 35.8%;
+      border-top-right-radius: 10px;
+      box-shadow: 15px -0 0 #fff;
     }
 }
 

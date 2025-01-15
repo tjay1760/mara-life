@@ -25,7 +25,7 @@ const Navbar = () => {
           isMenuOpen
             ? "border-none"
             : "border border-gray-200 border-opacity-50 rounded-xl p-[1px]"
-        } text-3xl text-gray-600 lg:hidden fixed top-4 right-2 z-30`}
+        } text-3xl text-gray-600 lg:hidden fixed top-4 right-2 z-50`}
         aria-label="Toggle menu"
       >
         {isMenuOpen ? <IoCloseOutline /> : <IoMenuOutline />}
@@ -43,7 +43,7 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden lg:flex"
-        } flex-col fixed items-center border z-20 bg-white rounded-2xl h-96 m-3 gap-3 w-11/12 lg:h-auto lg:w-[60%] lg:right-1 lg:rounded-xl lg:justify-between lg:fixed lg:border-4 lg:border-opacity-5`}
+        } flex-col fixed items-center border z-50 bg-white rounded-2xl h-96 m-3 gap-3 w-11/12 lg:h-auto lg:w-[60%] lg:right-1 lg:rounded-xl lg:justify-between lg:fixed lg:border-4 lg:border-opacity-5`}
         style={{
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
         }}

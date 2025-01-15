@@ -65,6 +65,7 @@ border:transparent;
       left: 35.05%;
       border-top-right-radius: 10px;
       box-shadow: 15px -0 0 #fff;
+      z-index: index 999;
     }
 
     .hero-holder::after{
@@ -77,6 +78,7 @@ border:transparent;
       right:1%;
       border-top-right-radius: 10px;
       box-shadow: 15px -0 0 #fff;
+      z-index: index 999;
     }
 }
 
@@ -91,6 +93,7 @@ border:transparent;
     left: 35.75%;
     border-top-right-radius: 10px;
     box-shadow: 15px -0 0 #fff;
+    z-index: index 999;
   }
 
   .hero-holder::after{
@@ -103,6 +106,7 @@ border:transparent;
     right:1%;
     border-top-right-radius: 10px;
     box-shadow: 15px -0 0 #fff;
+    z-index: index 999;
   }
 
   /* .header-navigation {

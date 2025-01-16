@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import HomePage from './components/Home/HomePage';
 import AboutPage from './components/About/AboutPage';
 import TrainingsPage from './components/Trainings/TrainingsPage';
@@ -22,7 +23,7 @@ const App = () => {
       <Route path ={"/products"} element ={<ProductsPage/>}/>
       <Route path ={"/trainings"} element ={<TrainingsPage/>}/>
       </Routes>
-      
+      <Footer/>
     </>
   )
 }

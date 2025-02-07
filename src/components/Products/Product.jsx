@@ -12,7 +12,7 @@ const Product = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/public/products.json")
+    fetch("s/products.json")
       .then((response) => response.json())
       .then((data) => {
         console.log(data)

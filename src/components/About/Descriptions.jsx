@@ -22,9 +22,9 @@ const values = [
 ]
 const Descriptions = () => {
   return (
-    <div className='descriptions-holder bg-gray-300'>
+    <div className='descriptions-holder w-11/12 rounded-xl mx-auto bg-gray-300 md:flex mt-10'>
         {values.map((value, index) => (
-            <div key={index} className='description border flex flex-col items-center gap-2 p-2'>
+            <div key={index} className='description flex flex-col items-center gap-2 p-2'>
                 <h1 className='text-3xl font-bold text-green-900'>{value.title}</h1>
                 <img src={value.img} className='h-20'/>
                 <p className='statement mt-3 text-center'>{value.description}</p>

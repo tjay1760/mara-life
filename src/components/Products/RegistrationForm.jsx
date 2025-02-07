@@ -44,7 +44,7 @@ const RegistrationForm = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="border bg-white w-11/12 p-4 mt-4 rounded-xl">
         <div className="client-information-header mt-5 flex flex-col items-start">
           <h1 className="text-sm text-gray-600">Step 1</h1>
-          <div className="description flex items-center justify-center gap-2">
+          <div className="description md:flex md:items-center md:justify-center md:gap-2">
             <h1 className="font-medium text-base text-green-900">
               Client Information
             </h1>

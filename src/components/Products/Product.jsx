@@ -56,27 +56,37 @@ const Product = () => {
             <li key={index}>{benefit}</li>
           ))}
         </ul>
+        <button className="order-btn bg-buttonHover text-green-950 font-medium rounded-lg px-3 py-1 mt-5">Order Product</button>
       </div>
 
       {/* Related Products */}
       <div className="related-products">
-        <h2 className="text-2xl font-bold mt-10">Related Products</h2>
+        <h2 className="text-2xl font-bold mt-10 ml-5">Related Products</h2>
         <Swiper
-          slidesPerView={1}
+          slidesPerView={1.25}
           spaceBetween={10}
           breakpoints={{
             640: { slidesPerView: 2, spaceBetween: 20 },
-            768: { slidesPerView: 3, spaceBetween: 40 },
+            768: { slidesPerView: 4, spaceBetween: 40 },
           }}
           className="mySwiper"
         >
           {relatedProducts.map((relatedProduct) => (
             <SwiperSlide key={relatedProduct.id}>
-              <div className="related-product border border-gray-300 rounded-lg p-2">
+              <div 
+              className="products-card border border-gray-300 rounded-lg p-2"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.25rem",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              >
                 <img
                   src={relatedProduct.img}
                   alt={relatedProduct.name}
-                  className="h-48 w-full object-cover"
+                  className="h-48"
                 />
                 <h3 className="text-lg font-semibold">{relatedProduct.name}</h3>
                 <button className="order-btn bg-buttonHover text-green-950 font-medium rounded-lg px-3 py-1">

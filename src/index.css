@@ -65,8 +65,11 @@ border:transparent;
       left: 35.05%;
       border-top-right-radius: 10px;
       box-shadow: 15px -0 0 #fff;
+      z-index: 20;
     }
-
+.overlay{
+z-index: 10;
+}
     .hero-holder::after{
       background-color: transparent;
       content: "";
@@ -77,6 +80,7 @@ border:transparent;
       right:1%;
       border-top-right-radius: 10px;
       box-shadow: 15px -0 0 #fff;
+      z-index: 20;
     }
 }
 
@@ -91,6 +95,7 @@ border:transparent;
     left: 35.75%;
     border-top-right-radius: 10px;
     box-shadow: 15px -0 0 #fff;
+    z-index: 20;
   }
 
   .hero-holder::after{
@@ -103,6 +108,7 @@ border:transparent;
     right:1%;
     border-top-right-radius: 10px;
     box-shadow: 15px -0 0 #fff;
+    z-index: 20;
   }
 
   /* .header-navigation {

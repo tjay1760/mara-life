@@ -5,7 +5,7 @@ import Products from './Products'
 import Trainings from './Trainings'
 import Testimonials from './Testimonials'
 import Partners from './Partners'
-import Footer from './Footer'
+
 
 const HomePage = () => {
   return (
@@ -16,7 +16,6 @@ const HomePage = () => {
     <Trainings/>
     <Testimonials/>
     <Partners/>
-    <Footer/>
     </>
     
   )

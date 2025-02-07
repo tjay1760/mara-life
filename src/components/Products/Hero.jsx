@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../assets/hero/hero-logo.svg';
+import Logo from '../../assets/hero/dark-logo.svg';
 import bgImage from "../../assets/hero/herobg2.png"
 
 const Hero = () => {

@@ -3,7 +3,9 @@
     {
       "id": 1,
       "name": "V-GAR™ WP",
+      "route":"vgar",
       "detail": "Natural, Residue-Free Nematode Control",
+      "img":"../src/assets/products/v-gar.png",
       "description": "V-GAR™ WP is an advanced bio-nematicide utilizing Paecilomyces lilacinus, a naturally occurring fungus, to control harmful nematodes like root-knot, cyst, and ring nematodes. This eco-friendly solution leaves zero harmful residues, is safe for beneficial soil organisms, and integrates seamlessly into IPM (Integrated Pest Management) systems, supporting sustainable farming and enhancing soil health.",
       "key_benefits": [
         "Effective Nematode Suppression: Controls major nematode species, including root-knot, cyst, and lesion nematodes, reducing crop losses significantly.",
@@ -16,7 +18,9 @@
     {
       "id": 2,
       "name": "Siriza™ WP",
+      "route":"siriza",
       "detail": "Natural Thrip Control for Healthier Crops",
+      "img":"../src/assets/products/siriza.png",
       "description": "Siriza™ WP is a bio-insecticide formulated with Beauveria bassiana, targeting thrips and other insect pests while being safe for plants, people, and the environment. Ideal for IPM programs, it offers effective, residue-free pest control for vegetables and ornamentals with weekly applications. Mix 500g in 1000L of water for comprehensive foliar coverage. Perfect for sustainable pest management.",
       "key_benefits": [
         "Targeted Thrip Control: Effectively controls thrips, reducing pest damage and boosting crop health.",
@@ -28,7 +32,9 @@
     {
       "id": 3,
       "name": "Optimus Prime",
+      "route":"optimusprime",
       "detail": "Precision Pest Control for Export-Quality Crops",
+      "img":"../src/assets/products/optimus-prime.png",
       "description": "Optimus Prime by Mara Lifesciences provides advanced, eco-friendly control against harmful quarantine pests like false codling moth (Thaumatotibia leucotreta) and Spodoptera species. This biological insecticide uses Bacillus thuringiensis (Bt) to target these pests without leaving harmful residues, helping farmers meet strict standards in export markets, including the European Union. Optimus Prime offers targeted, residue-free protection for flowers, vegetables, and herbs—ensuring crops remain safe, sustainable, and market-ready.",
       "key_benefits": [
         "Quarantine Pest Control: Specifically targets Thaumatotibia leucotreta and Spodoptera species, helping to meet international export standards.",
@@ -41,7 +47,9 @@
     {
       "id": 4,
       "name": "MycoDiff™ WP",
+      "route":"mycodiff",
       "detail": "Advanced Soil-Borne Disease Control & Plant Growth Enhancer",
+      "img":"../src/assets/products/mycodiff.png",
       "description": "MycoDiff™ WP is a high-performance, eco-safe bio-fungicide designed with Trichoderma harzianum to protect crops from damaging soil-borne diseases and promote vigorous plant growth. Formulated to enhance Integrated Pest Management (IPM) systems, MycoDiff™ WP targets root diseases like Fusarium wilt and Rhizoctonia, while stimulating root development and boosting nutrient uptake. Ideal for sustainable farming practices.",
       "key_benefits": [
         "Powerful Soil Disease Control: Effectively targets soil-borne pathogens like Fusarium, Rhizoctonia, and Sclerotinia, protecting crops from root-related diseases.",
@@ -53,7 +61,9 @@
     {
       "id": 5,
       "name": "Marashield WP",
+      "route":"marashield",
       "detail": "Advanced Bio-Protection for Powdery Mildew and Crop Health",
+      "img":"../src/assets/products/marashield.png",
       "description": "Marashield WP is a powerful, eco-friendly wettable powder bioprotectant containing Bacillus amyloliquefaciens (BAA). Specially formulated to target powdery mildew and other diseases, Marashield WP boosts plant health, enhances resilience, and is ideal for Integrated Pest Management (IPM) systems. Easy to apply as a foliar spray, Marashield WP provides sustainable disease control for vegetables and ornamentals, helping farmers achieve healthier, high-yield crops.",
       "key_benefits": [
         "High Potency: 1x10¹² CFU/ml of active beneficial bacteria.",

@@ -9,6 +9,7 @@ import product2 from "../../assets/products/product2.png";
 const ourProducts = [
   {
     name: "Mycodiff",
+    route: "mycodiff",
     scientificName: "Mycobacterium diffusa",
     description:
       "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
@@ -16,6 +17,7 @@ const ourProducts = [
   },
   {
     name: "MaraShield",
+    route: "marashield",
     scientificName: "Marasmius shieldii",
     description:
       "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
@@ -23,6 +25,7 @@ const ourProducts = [
   },
   {
     name: "Optimus Prime",
+    route: "optimusprime",
     scientificName: "Optimus primus",
     description:
       "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
@@ -30,6 +33,7 @@ const ourProducts = [
   },
   {
     name: "V-GAR",
+    route: "vgar",
     scientificName: "Vitis garcinia",
     description:
       "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
@@ -37,6 +41,7 @@ const ourProducts = [
   },
   {
     name: "Siriza",
+    route: "siriza",
     scientificName: "Siriza viridis",
     description:
       "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
@@ -78,7 +83,7 @@ const ProductsSlider = () => {
                 className="order-btn text-green-950 font-medium bg-buttonHover rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-3 py-1"
                 onClick={() =>
                   navigate(
-                    `/products/${product.name
+                    `/products/${product.route
                       .replace(/\s+/g, "-")
                       .toLowerCase()}`
                   )
@@ -113,7 +118,7 @@ const ProductsSlider = () => {
               className="order-btn text-green-950 font-medium bg-buttonHover rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-3 py-1"
               onClick={() =>
                 navigate(
-                  `/products/${product.name.replace(/\s+/g, "-").toLowerCase()}`
+                  `/products/${product.route.replace(/\s+/g, "-").toLowerCase()}`
                 )
               }
             >

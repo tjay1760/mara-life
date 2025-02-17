@@ -9,7 +9,21 @@ import productBgImg from "../../assets/hero/herobg2.png";
 
 
 const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState({
+    "id": 1,
+    "name": "V-GAR™ WP",
+    "route":"vgar",
+    "detail": "Natural, Residue-Free Nematode Control",
+    "img":"/products/v-gar.png",
+    "description": "V-GAR™ WP is an advanced bio-nematicide utilizing Paecilomyces lilacinus, a naturally occurring fungus, to control harmful nematodes like root-knot, cyst, and ring nematodes. This eco-friendly solution leaves zero harmful residues, is safe for beneficial soil organisms, and integrates seamlessly into IPM (Integrated Pest Management) systems, supporting sustainable farming and enhancing soil health.",
+    "key_benefits": [
+      "Effective Nematode Suppression: Controls major nematode species, including root-knot, cyst, and lesion nematodes, reducing crop losses significantly.",
+      "Enhanced Soil Health: Improves soil structure and microbial diversity, supporting long-term soil fertility and plant health.",
+      "IPM Compatible: Works well within Integrated Pest Management systems, helping reduce reliance on chemical treatments.",
+      "Residue-Free and Safe for Harvest: V-GAR™ WP leaves no harmful residues, allowing use up to the day of harvest with zero pre-harvest interval (PHI).",
+      "Safe for Beneficials: Harmless to pollinators, earthworms, and other non-target soil organisms, preserving ecological balance."
+    ]
+  });
   const [ourProducts, setOurProducts] = useState([]);
   useEffect(() => {
     fetch("/products.json")

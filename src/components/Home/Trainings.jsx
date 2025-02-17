@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useNavigate } from "react-router";
 import "swiper/css";
 
 import trainingPhoto1 from "../../assets/trainings/training-img1.jpg";
@@ -37,6 +38,7 @@ const ourTrainings =[
   }
 ]
 const Trainings = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="trainings-container w-11/12 mx-auto mt-10"
@@ -56,7 +58,9 @@ const Trainings = () => {
           chemical dependency for long-term agricultural success.
         </p>
         </div>
-        <button className="bg-buttonHover py-2 px-4 rounded-xl text-gray-900 ml-auto block max-w-max">View All</button>
+        <button className="bg-buttonHover py-2 px-4 rounded-xl text-gray-900 ml-auto block max-w-max"
+        onClick={()=>navigate("/trainings")}
+        >View All</button>
         </div>
                       
         <div className="cards mt-5">

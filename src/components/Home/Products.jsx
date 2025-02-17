@@ -97,10 +97,14 @@ const Products = () => {
           />
         </div>
         <div className="buttons flex justify-between mt-2 md:justify-start md:gap-4">
-          <button className="bg-white py-1 px-3 rounded-xl hover:bg-buttonHover">
+          <button className="bg-white py-1 px-3 rounded-xl hover:bg-buttonHover"
+          onClick={() => window.location.href = `/products/${selectedProduct.route}`}
+          >
             Learn More
           </button>
-          <button className="bg-white py-1 px-3 rounded-xl hover:bg-buttonHover">
+          <button className="bg-white py-1 px-3 rounded-xl hover:bg-buttonHover"
+          onClick={() => window.location.href = `/products/${selectedProduct.route}`}
+          >
             Order Product
           </button>
         </div>

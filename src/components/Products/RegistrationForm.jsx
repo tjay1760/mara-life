@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { useLocation } from "react-router";
 import individualIcon from "../../assets/products/individual-icon.svg";
 import companiesIcon from "../../assets/products/group-icon.svg";
 import enterprisesIcon from "../../assets/products/enterprises-icon.svg";
@@ -8,6 +9,7 @@ import callingIcon from "../../assets/products/calling-icon.svg";
 import personIcon from "../../assets/products/person-icon.svg";
 
 const RegistrationForm = () => {
+  const location = useLocation();
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [selectedClientType, setSelectedClientType] = useState(null);
   const [selectedContactMethod, setSelectedContactMethod] = useState(null);
@@ -15,7 +17,14 @@ const RegistrationForm = () => {
   const onSubmit = (data) => {
     console.log(data);
   };
-
+  useEffect(() => {
+    if (location.hash === "#registration-form") {
+      const formElement = document.getElementById("registration-form");
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const clientTypes = [
     { label: "Individuals", icon: individualIcon },
     { label: "Scaling Companies", icon: companiesIcon },
@@ -38,7 +47,7 @@ const RegistrationForm = () => {
   ];
 
   return (
-    <div className="mt-10 bg-gray-100 w-11/12 mx-auto p-2 flex flex-col items-center justify-center text-center">
+    <div id="registration-form" className="mt-10 bg-gray-100 w-11/12 mx-auto p-2 flex flex-col items-center justify-center text-center">
       <h1 className="text-green-950 font-bold text-2xl">Pesticide Registration Assistance Form</h1>
       <p>Please fill out the form below to register your pesticide product with our assistance program.</p>
       <form onSubmit={handleSubmit(onSubmit)} className="border bg-white w-11/12 p-4 mt-4 rounded-xl">

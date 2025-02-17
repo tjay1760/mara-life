@@ -41,10 +41,14 @@ const Hero = () => {
             maximize yields.
           </div>
           <div className="font-bold mt-2 mx-auto md:mx-10 md:mt-10 header-buttons text-gray-700 bg-white w-[18rem] border border-gray-200 py-1 px-1 rounded-lg">
-            <button className="bg-buttonHover rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1">
+            <button className="bg-buttonHover rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1"
+            onClick={() => window.location.href = `/products#registration-form`}
+            >
               Register Now
             </button>
-            <button className="bg-white rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1">
+            <button className="bg-white rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1"
+              onClick={() => window.location.href = `/trainings`}
+           >
               Learn More
             </button>
           </div>

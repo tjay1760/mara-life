@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -6,41 +6,22 @@ import product1 from "../../assets/products/product1.png";
 import product2 from "../../assets/products/product2.png";
 import productBgImg from "../../assets/hero/herobg2.png";
 
-const ourProducts = [
-  {
-    name: "Mycodiff",
-    description:
-      "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
-    image: product1,
-  },
-  {
-    name: "MaraShield",
-    description:
-      "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
-    image: product2,
-  },
-  {
-    name: "Optimus Prime",
-    description:
-      "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
-    image: product1,
-  },
-  {
-    name: "V-GAR",
-    description:
-      "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
-    image: product2,
-  },
-  {
-    name: "Siriza",
-    description:
-      "A fast-acting, non-selective solution for eliminating weeds and unwanted vegetation. Designed for residential, agricultural, and industrial use, it targets a wide range of plant species, providing long-lasting results. Easy to apply, rainproof, and eco-conscious, it ensures effective weed control while protecting your surroundings.",
-    image: product1,
-  },
-];
+
 
 const Products = () => {
-  const [selectedProduct, setSelectedProduct] = useState(ourProducts[0]);
+  const [selectedProduct, setSelectedProduct] = useState("");
+  const [ourProducts, setOurProducts] = useState([]);
+  useEffect(() => {
+    fetch("/products.json")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setOurProducts(data.products);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  });
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -97,7 +78,7 @@ const Products = () => {
           </p>
           <img
             className="md:hidden mt-4 rounded"
-            src={selectedProduct.image}
+            src={selectedProduct.img}
             alt={selectedProduct.name}
           />
         </div>
@@ -110,10 +91,9 @@ const Products = () => {
           </button>
         </div>
       </div>
-
       <img
         className="desktop h-80 rounded"
-        src={selectedProduct.image}
+        src={selectedProduct.img}
         alt={selectedProduct.name}
       />
     </div>

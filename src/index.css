@@ -34,7 +34,7 @@ border:transparent;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    padding: 2px;
+    padding: 5px;
     min-width: fit-content;
     align-items: center;
     cursor: pointer;

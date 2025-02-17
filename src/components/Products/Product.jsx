@@ -89,7 +89,9 @@ const Product = () => {
                   className="h-48"
                 />
                 <h3 className="text-lg font-semibold">{relatedProduct.name}</h3>
-                <button className="order-btn bg-buttonHover text-green-950 font-medium rounded-lg px-3 py-1">
+                <button className="order-btn bg-buttonHover text-green-950 font-medium rounded-lg px-3 py-1"
+                onClick={() => setProduct(relatedProduct)}
+                >
                   Order Product
                 </button>
               </div>

@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useNavigate } from "react-router";
 import "swiper/css";
-
-import product1 from "../../assets/products/product1.png";
-import product2 from "../../assets/products/product2.png";
 import productBgImg from "../../assets/hero/herobg2.png";
 
 
 
 const Products = () => {
+  const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState({
     "id": 1,
     "name": "V-GAR™ WP",
@@ -98,12 +97,12 @@ const Products = () => {
         </div>
         <div className="buttons flex justify-between mt-2 md:justify-start md:gap-4">
           <button className="bg-white py-1 px-3 rounded-xl hover:bg-buttonHover"
-          onClick={() => window.location.href = `/products/${selectedProduct.route}`}
+          onClick={() => navigate(`/products/${selectedProduct.route}`) }
           >
             Learn More
           </button>
           <button className="bg-white py-1 px-3 rounded-xl hover:bg-buttonHover"
-          onClick={() => window.location.href = `/products/${selectedProduct.route}`}
+          onClick={() => navigate(`/products/${selectedProduct.route}`) }
           >
             Order Product
           </button>

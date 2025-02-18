@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Logo from "../../assets/hero/hero-logo.svg";
+import { useNavigate } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Logo from "../../assets/hero/hero-logo.svg";
 import herobg1 from "../../assets/hero/hero-bg-desk-2.jpg";
 import herobg2 from "../../assets/hero/hero-bg-desk-video.png";
 import herobg3 from "../../assets/hero/hero-bg-desk-3.jpg";
@@ -15,7 +16,7 @@ import "swiper/css";
 const Hero = () => {
   const [heroBackground, setHeroBackground] = useState(herobg1);
   const backgroundImages = [herobg1, herobg2, herobg3, herobg4];
-
+const navigate = useNavigate();
   return (
     <>
       <div className="hero-container relative h-auto">
@@ -42,12 +43,12 @@ const Hero = () => {
           </div>
           <div className="font-bold mt-2 mx-auto md:mx-10 md:mt-10 header-buttons text-gray-700 bg-white w-[18rem] border border-gray-200 py-1 px-1 rounded-lg">
             <button className="bg-buttonHover rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1"
-            onClick={() => window.location.href = `/products#registration-form`}
+            onClick={() => navigate(`/products#registration-form`) }
             >
               Register Now
             </button>
             <button className="bg-white rounded-lg mx-1 hover:bg-gray-300 active:bg-green-600 px-2 py-1"
-              onClick={() => window.location.href = `/trainings`}
+              onClick={() => navigate( `/trainings`)}
            >
               Learn More
             </button>
